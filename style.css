@@ -1,0 +1,34 @@
+/* 基本的なボディのスタイル */
+body {
+    font-family: Arial, sans-serif; /* Arialフォントを使用 */
+    text-align: center; /* コンテンツを中央揃え */
+    background-color: #f0f0f0; /* 背景色を薄いグレーに設定 */
+}
+
+/* 計算表のコンテナ */
+#calculator-container {
+    display: inline-block; /* ボックスを中央に寄せる */
+    margin: 20px; /* 上下左右に余白をつける */
+}
+
+/* テーブルの基本スタイル */
+table {
+    margin: 0 auto; /* テーブルを中央揃え */
+    border-collapse: collapse; /* セルの境界線を重ならないようにする */
+}
+
+/* テーブルのセルのスタイル */
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center; /* セル内の文字を中央揃え */
+    border: 1px solid #000; /* セルの境界線を黒に設定 */
+}
+
+/* 入力フィールドのスタイル */
+input {
+    width: 100%; /* フィールドの幅をセルいっぱいに */
+    height: 100%; /* フィールドの高さをセルいっぱいに */
+    text-align: center; /* 入力された数字を中央揃え */
+    font-size: 18px; /* 文字サイズを少し大きく */
+}
