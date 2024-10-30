@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8"> <!-- ページの文字エンコーディングを指定します -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応のための設定 -->
-    <title>100マス計算</title> <!-- ページのタイトルを指定します -->
-    <link rel="stylesheet" href="style.css"> <!-- 外部CSSファイルを読み込み、デザインを適用 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100マス計算アプリ</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSSのリンク -->
 </head>
 <body>
-    <h1>100マス計算</h1> <!-- ページの大見出し -->
-    
-    <!-- 計算表を配置するためのコンテナ -->
-    <div id="calculator-container">
-        <table id="calculator">
-            <!-- ここにJavaScriptで100マスの計算表を自動生成します -->
-        </table>
-        <!-- スタートボタン -->
-        <button id="start-btn">スタート</button>
-        <!-- チェックボタン -->
-        <button id="check-btn">チェック</button>
+
+    <h1>100マス計算</h1>
+
+    <div id="timerDisplay">経過時間: 0秒</div> <!-- タイマー表示用の要素 -->
+
+    <table id="calculationTable">
+        <!-- テーブルはJavaScriptで生成される -->
+    </table>
+
+    <div class="keypad">
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="clearInput()">C</button>
+        <button onclick="confirmInput()" class="confirm">決定</button>
+        <button onclick="stopTimer()" class="stop">終了</button> <!-- 終了ボタンを追加 -->
     </div>
 
-    <!-- JavaScriptファイルを読み込む -->
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- JavaScriptのリンク -->
+
 </body>
 </html>

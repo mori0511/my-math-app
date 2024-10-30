@@ -1,34 +1,46 @@
-/* 基本的なボディのスタイル */
 body {
-    font-family: Arial, sans-serif; /* Arialフォントを使用 */
-    text-align: center; /* コンテンツを中央揃え */
-    background-color: #f0f0f0; /* 背景色を薄いグレーに設定 */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; /* マージンを0に設定 */
+    padding: 20px; /* 内側のパディングを設定 */
+    box-sizing: border-box; /* ボックスモデルを設定 */
+    overflow: auto; /* オーバーフローを自動に設定 */
 }
 
-/* 計算表のコンテナ */
-#calculator-container {
-    display: inline-block; /* ボックスを中央に寄せる */
-    margin: 20px; /* 上下左右に余白をつける */
-}
-
-/* テーブルの基本スタイル */
 table {
-    margin: 0 auto; /* テーブルを中央揃え */
-    border-collapse: collapse; /* セルの境界線を重ならないようにする */
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 90%; /* テーブルの幅を90%に設定 */
+    max-width: 400px; /* 最大幅を設定 */
 }
 
-/* テーブルのセルのスタイル */
-td {
-    width: 50px;
-    height: 50px;
-    text-align: center; /* セル内の文字を中央揃え */
-    border: 1px solid #000; /* セルの境界線を黒に設定 */
+th, td {
+    border: 1px solid #000;
+    padding: 5px; /* パディングを小さく設定 */
+    width: 50px; /* 幅を調整 */
+    height: 15px; /* 縦幅を小さく設定 */
+    text-align: center;
+    font-size: 1.5em; /* フォントサイズを調整 */
 }
 
-/* 入力フィールドのスタイル */
-input {
-    width: 100%; /* フィールドの幅をセルいっぱいに */
-    height: 100%; /* フィールドの高さをセルいっぱいに */
-    text-align: center; /* 入力された数字を中央揃え */
-    font-size: 18px; /* 文字サイズを少し大きく */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; /* ギャップを調整 */
+    max-width: 300px; /* 最大幅を調整 */
+    margin: 20px auto;
+}
+
+.keypad button {
+    padding: 15px; /* ボタンのパディングを調整 */
+    font-size: 1.5em; /* フォントサイズを調整 */
+    min-width: 50px; /* 最小幅を設定 */
+}
+
+/* 確認ボタンとクリアボタンのスタイル */
+button.confirm, button.clear {
+    width: 100%; /* 幅を100%に設定 */
+    padding: 10px; /* パディングを設定 */
+    font-size: 1.2em; /* フォントサイズを設定 */
+    margin-top: 10px; /* マージンを追加 */
 }
